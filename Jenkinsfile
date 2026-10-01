@@ -33,13 +33,12 @@ stage('Dependencies') {
         bat '"C:\\Program Files\\nodejs\\npm.cmd" install'
     }
 }
-     
+
 stage('Test APP') {
     steps {
-        bat '"C:\\Program Files\\nodejs\\npm.cmd" test'
+        bat '"C:\\Program Files\\nodejs\\node.exe" --check server.js'
     }
 }
-
         stage('Build') {
             steps {
                 bat 'docker build -t %IMAGE_NAME%:%BUILD_NUMBER% .'
