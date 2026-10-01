@@ -28,18 +28,17 @@ pipeline {
                 bat 'docker --version'
             }
         }
-
-        stage('Dependencies') {
-            steps {
-                bat 'npm install'
-            }
-        }
-
-        stage('Test APP') {
-            steps {
-                bat 'npm test'
-            }
-        }
+stage('Dependencies') {
+    steps {
+        bat '"C:\\Program Files\\nodejs\\npm.cmd" install'
+    }
+}
+     
+stage('Test APP') {
+    steps {
+        bat '"C:\\Program Files\\nodejs\\npm.cmd" test'
+    }
+}
 
         stage('Build') {
             steps {
