@@ -3,7 +3,7 @@ pipeline{
     parameters{
         string(
             name : 'APP_PORT',
-            defaultvalue : '3000'
+            defaultValue : '3000',
             description : 'Server Port'
         )
     }
